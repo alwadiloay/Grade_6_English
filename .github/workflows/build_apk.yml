@@ -11,10 +11,10 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Set up Java Development Kit (JDK)
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@v4
       with:
         distribution: 'zulu'
         java-version: '17'
@@ -24,6 +24,12 @@ jobs:
       with:
         flutter-version: '3.19.x'
         channel: 'stable'
+
+    - name: Initialize Flutter Project if missing
+      run: |
+        if [ ! -f "pubspec.yaml" ]; then
+          flutter create . --org com.example.grade6 --project-name grade6_english
+        fi
 
     - name: Install dependencies
       run: flutter pub get
