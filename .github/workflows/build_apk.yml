@@ -25,6 +25,9 @@ jobs:
         flutter-version: '3.29.x'
         channel: 'stable'
 
+    - name: Recreate Android files
+      run: flutter create . --platforms=android --overwrite
+
     - name: Install dependencies
       run: flutter pub get
 
