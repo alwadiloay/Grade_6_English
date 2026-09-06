@@ -1,43 +1,28 @@
-[
-  {
-    "unit_number": 1,
-    "term": "Term 1",
-    "title_en": "My Country",
-    "title_ar": "وطني",
-    "text_en": "My name is Omar. I live in Syria. It is a beautiful country. We speak Arabic.",
-    "dictionary": {
-      "my": "ملكي",
-      "country": "بلد",
-      "live": "أعيش",
-      "beautiful": "جميل",
-      "speak": "نتحدث"
-    },
-    "questions": [
-      {
-        "question": "Where does Omar live?",
-        "options": ["Jordan", "Syria", "Egypt"],
-        "correct_index": 1
+{
+  "units": [
+    {
+      "id": 1,
+      "title": "Unit 1: Welcome to Grade 6",
+      "description": "الوحدة الأولى: مرحباً بكم في الصف السادس",
+      "content_en": "Welcome back to school! Today we are learning English together.",
+      "content_ar": "مرحباً بكم مجدداً في المدرسة! اليوم نتعلم اللغة الإنجليزية معاً.",
+      "dictionary": {
+        "Welcome": "مرحباً",
+        "School": "مدرسة",
+        "English": "اللغة الإنجليزية"
       }
-    ]
-  },
-  {
-    "unit_number": 2,
-    "term": "Term 1",
-    "title_en": "At the Theatre",
-    "title_ar": "في المسرح",
-    "text_en": "We are preparing for a play at the theatre today. Our teacher is helping us.",
-    "dictionary": {
-      "theatre": "المسرح",
-      "play": "مسرحية",
-      "preparing": "نستعد",
-      "teacher": "معلم"
     },
-    "questions": [
-      {
-        "question": "Where are they preparing?",
-        "options": ["School", "Theatre", "Park"],
-        "correct_index": 1
+    {
+      "id": 2,
+      "title": "Unit 2: Our School Day",
+      "description": "الوحدة الثانية: يومنا المدرسي",
+      "content_en": "We study science, math, and English every day.",
+      "content_ar": "نحن ندرس العلوم، الرياضيات، واللغة الإنجليزية كل يوم.",
+      "dictionary": {
+        "Study": "يدرس",
+        "Science": "علوم",
+        "Math": "رياضيات"
       }
-    ]
-  }
-]
+    }
+  ]
+}
