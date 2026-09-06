@@ -1,8 +1,9 @@
-import 'package:flutter/material.dart';
+import 'package0:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const EnglishCurriculumApp());
 }
 
@@ -32,6 +33,8 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List units = [];
+  bool isLoading = true;
+  String errorMessage = '';
 
   @override
   void initState() {
@@ -44,10 +47,14 @@ class _HomeScreenState extends State<HomeScreen> {
       final String response = await rootBundle.loadString('assets/data.json');
       final data = await json.decode(response);
       setState(() {
-        units = data['units'];
+        units = data['units'] ?? [];
+        isLoading = false;
       });
     } catch (e) {
-      debugPrint("Error loading data: $e");
+      setState(() {
+        isLoading = false;
+        errorMessage = 'خطأ في قراءة ملف البيانات: $e';
+      });
     }
   }
 
@@ -58,36 +65,48 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text('منهاج اللغة الإنجليزية - الصف السادس'),
         centerTitle: true,
       ),
-      body: units.isEmpty
+      body: isLoading
           ? const Center(child: CircularProgressIndicator())
-          : ListView.builder(
-              itemCount: units.length,
-              itemBuilder: (context, index) {
-                final unit = units[index];
-                return Card(
-                  margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                  child: ListTile(
-                    leading: CircleAvatar(
-                      child: Text('${unit['id']}'),
+          : errorMessage.isNotEmpty
+              ? Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Text(
+                      errorMessage,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(color: Colors.red, fontSize: 16),
                     ),
-                    title: Text(
-                      unit['title'],
-                      style: const TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    subtitle: Text(unit['description']),
-                    trailing: const Icon(Icons.arrow_forward_ios),
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => DetailScreen(unit: unit),
-                        ),
-                      );
-                    },
                   ),
-                );
-              },
-            ),
+                )
+              : ListView.builder(
+                  itemCount: units.length,
+                  itemBuilder: (context, index) {
+                    final unit = units[index];
+                    return Card(
+                      margin: const EdgeInsets.symmetric(
+                          horizontal: 12, vertical: 6),
+                      child: ListTile(
+                        leading: CircleAvatar(
+                          child: Text('${unit['id']}'),
+                        ),
+                        title: Text(
+                          unit['title'] ?? '',
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        subtitle: Text(unit['description'] ?? ''),
+                        trailing: const Icon(Icons.arrow_forward_ios),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => DetailScreen(unit: unit),
+                            ),
+                          );
+                        },
+                      ),
+                    );
+                  },
+                ),
     );
   }
 }
@@ -99,7 +118,7 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(unit['title'])),
+      appBar: AppBar(title: Text(unit['title'] ?? '')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: SingleChildScrollView(
@@ -112,7 +131,7 @@ class DetailScreen extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               Text(
-                unit['content_en'],
+                unit['content_en'] ?? '',
                 style: const TextStyle(fontSize: 16),
               ),
               const Divider(height: 32),
@@ -122,7 +141,7 @@ class DetailScreen extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               Text(
-                unit['content_ar'],
+                unit['content_ar'] ?? '',
                 style: const TextStyle(fontSize: 16),
               ),
               const Divider(height: 32),
@@ -131,13 +150,14 @@ class DetailScreen extends StatelessWidget {
                 style: Theme.of(context).textTheme.titleMedium,
               ),
               const SizedBox(height: 8),
-              ...Map<String, String>.from(unit['dictionary']).entries.map(
-                    (e) => ListTile(
-                      dense: true,
-                      title: Text(e.key),
-                      trailing: Text(e.value),
+              if (unit['dictionary'] != null)
+                ...Map<String, String>.from(unit['dictionary']).entries.map(
+                      (e) => ListTile(
+                        dense: true,
+                        title: Text(e.key),
+                        trailing: Text(e.value),
+                      ),
                     ),
-                  ),
             ],
           ),
         ),
