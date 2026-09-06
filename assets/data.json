@@ -17,11 +17,6 @@
           "question": "What subjects do we study this year?",
           "options": ["English and Science", "Only Music", "Only Art"],
           "answer": "English and Science"
-        },
-        {
-          "question": "What does 'Exciting' mean in Arabic?",
-          "options": ["ممل", "ممتع / مشوق", "صعب"],
-          "answer": "ممتع / مشوق"
         }
       ]
     },
@@ -42,11 +37,6 @@
           "question": "What do pupils do in their free time?",
           "options": ["Sleep all day", "Enjoy different hobbies", "Do homework only"],
           "answer": "Enjoy different hobbies"
-        },
-        {
-          "question": "What is the meaning of 'Pupils'?",
-          "options": ["معلمون", "تلاميذ", "مهندسون"],
-          "answer": "تلاميذ"
         }
       ]
     },
@@ -55,7 +45,7 @@
       "title": "Unit 3: Healthy Living",
       "description": "الوحدة الثالثة: الحياة الصحية",
       "content_en": "To stay healthy, we should eat fresh fruit and vegetables, drink plenty of water, and exercise every day.",
-      "content_ar": "لنحافط على صحتنا، يجب أن نأكل الفواكه والخضروات الطازجة، ونشرب الكثير من الماء، ونمارس الرياضة يومياً.",
+      "content_ar": "لنحافظ على صحتنا، يجب أن نأكل الفواكه والخضروات الطازجة، ونشرب الكثير من الماء، ونمارس الرياضة يومياً.",
       "dictionary": {
         "Healthy": "صحي",
         "Fresh": "طازج",
@@ -67,6 +57,346 @@
           "question": "What should we eat to stay healthy?",
           "options": ["Sweets and fast food", "Fresh fruit and vegetables", "Nothing"],
           "answer": "Fresh fruit and vegetables"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Unit 4: In the City",
+      "description": "الوحدة الرابعة: في المدينة",
+      "content_en": "Cities have many tall buildings, busy streets, museums, and beautiful public parks where families gather.",
+      "content_ar": "تحتوي المدن على العديد من المباني العالية، والشوارع المزدحمة، والمتاحف، والحدائق العامة الجميلة حيث تتجمع العائلات.",
+      "dictionary": {
+        "City": "مدينة",
+        "Museum": "متحف",
+        "Public park": "حديقة عامة",
+        "Busy": "مزدحم"
+      },
+      "questions": [
+        {
+          "question": "Where do families gather in the city?",
+          "options": ["In public parks", "On the roofs", "In the streets"],
+          "answer": "In public parks"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Unit 5: In the Countryside",
+      "description": "الوحدة الخامسة: في الريف",
+      "content_en": "Life in the countryside is quiet and peaceful. Farmers grow crops and take care of farm animals like cows and sheep.",
+      "content_ar": "الحياة في الريف هادئة ومسالمة. يزرع المزارعون المحاصيل ويعتنون بحيوانات المزرعة مثل الأبقار والخراف.",
+      "dictionary": {
+        "Countryside": "الريف",
+        "Peaceful": "هادئ / مسالم",
+        "Farmer": "مزارع",
+        "Crops": "محاصيل"
+      },
+      "questions": [
+        {
+          "question": "How is life in the countryside?",
+          "options": ["Noisy and busy", "Quiet and peaceful", "Dangerous"],
+          "answer": "Quiet and peaceful"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Unit 6: Revision 1",
+      "description": "الوحدة السادسة: مراجعة 1",
+      "content_en": "Let's review what we learned in the previous units: school subjects, daily hobbies, health tips, and places around us.",
+      "content_ar": "دعونا نراجع ما تعلمناه في الوحدات السابقة: المواد الدراسية، الهوايات اليومية، النصائح الصحية، والأماكن من حولنا.",
+      "dictionary": {
+        "Review": "مراجعة",
+        "Previous": "سابق",
+        "Learned": "تعلمنا",
+        "Tips": "نصائح"
+      },
+      "questions": [
+        {
+          "question": "What is the purpose of Revision 1?",
+          "options": ["To learn new rules", "To review previous units", "To play games"],
+          "answer": "To review previous units"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Unit 7: Famous Places in Syria",
+      "description": "الوحدة السابعة: أماكن مشهورة في سوريا",
+      "content_en": "Syria is rich in history. Ancient sites like Palmyra, Aleppo Citadel, and the Umayyad Mosque attract visitors from all over the world.",
+      "content_ar": "سوريا غنية بالتاريخ. المواقع الأثرية مثل تدمر، وقلعة حلب، والجامع الأموي تجذب الزوار من جميع أنحاء العالم.",
+      "dictionary": {
+        "Ancient": "قديم / أثري",
+        "Citadel": "قلعة",
+        "Mosque": "مسجد",
+        "Visitors": "زوار"
+      },
+      "questions": [
+        {
+          "question": "Which ancient site is mentioned in Syria?",
+          "options": ["Palmyra", "Eiffel Tower", "Big Ben"],
+          "answer": "Palmyra"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Unit 8: Ancient Inventions",
+      "description": "الوحدة الثامنة: الاختراعات القديمة",
+      "content_en": "People in the past invented many useful tools, such as the wheel, paper, and the compass, which changed human life.",
+      "content_ar": "اخترع الناس في الماضي العديد من الأدوات المفيدة، مثل العجلة، الورق، والبوصلة، والتي غيرت حياة البشرية.",
+      "dictionary": {
+        "Invention": "اختراع",
+        "Useful": "مفيد",
+        "Wheel": "عجلة",
+        "Compass": "بوصلة"
+      },
+      "questions": [
+        {
+          "question": "Which invention helped people navigate?",
+          "options": ["Paper", "The compass", "The wheel"],
+          "answer": "The compass"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Unit 9: Our Natural World",
+      "description": "الوحدة التاسعة: عالمنا الطبيعي",
+      "content_en": "Our planet has mountains, rivers, seas, and forests. We must protect nature and stop pollution to keep it clean.",
+      "content_ar": "كوكبنا يحتوي على الجبال، الأنهار، البحار، والغابات. يجب علينا حماية الطبيعة وإيقاف التلوث لتبقى نظيفة.",
+      "dictionary": {
+        "Planet": "كوكب",
+        "Forest": "غابة",
+        "Protect": "يحمي",
+        "Pollution": "تلوث"
+      },
+      "questions": [
+        {
+          "question": "Why should we protect nature?",
+          "options": ["To stop pollution and keep it clean", "To build more factories", "To cut trees"],
+          "answer": "To stop pollution and keep it clean"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Unit 10: Weather and Seasons",
+      "description": "الوحدة العاشرة: الطقس والفصول",
+      "content_en": "There are four seasons in a year: Spring, Summer, Autumn, and Winter. Each season brings different weather conditions.",
+      "content_ar": "هناك أربعة فصول في السنة: الربيع، الصيف، الخريف، والشتاء. كل فصل يأتي بأحوال جوية مختلفة.",
+      "dictionary": {
+        "Seasons": "فصول",
+        "Spring": "الربيع",
+        "Autumn": "الخريف",
+        "Weather": "الطقس"
+      },
+      "questions": [
+        {
+          "question": "How many seasons are there in a year?",
+          "options": ["Two", "Three", "Four"],
+          "answer": "Four"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Unit 11: Travel and Transport",
+      "description": "الوحدة الحادية عشرة: السفر ووسائل النقل",
+      "content_en": "People travel by train, bus, plane, or car. Traveling allows us to see new cultures and meet friendly people.",
+      "content_ar": "يسافر الناس بالقطار، الحافلة، الطائرة، أو السيارة. السفر يتيح لنا رؤية ثقافات جديدة والتعرف على أناس ودودين.",
+      "dictionary": {
+        "Transport": "وسائل النقل",
+        "Plane": "طائرة",
+        "Culture": "ثقافة",
+        "Friendly": "ودود"
+      },
+      "questions": [
+        {
+          "question": "Which of these is a fast means of transport for long distances?",
+          "options": ["Bicycle", "Plane", "Walking"],
+          "answer": "Plane"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Unit 12: Revision 2",
+      "description": "الوحدة الثانية عشرة: مراجعة 2",
+      "content_en": "Reviewing geography, historical sites, environmental protection, and different modes of transportation.",
+      "content_ar": "مراجعة الجغرافيا، المواقع التاريخية، حماية البيئة، ووسائل النقل المختلفة.",
+      "dictionary": {
+        "Geography": "جغرافيا",
+        "Environment": "بيئة",
+        "Modes": "أنواع / أشكال",
+        "Transportation": "مواصلات"
+      },
+      "questions": [
+        {
+          "question": "What is covered in Revision 2?",
+          "options": ["Units 7 to 11", "Unit 1 only", "Cooking recipes"],
+          "answer": "Units 7 to 11"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Unit 13: Science and Technology",
+      "description": "الوحدة الثالثة عشرة: العلوم والتكنولوجيا",
+      "content_en": "Modern technology makes communication faster and easier. Computers, smartphones, and the internet connect people globally.",
+      "content_ar": "التكنولوجيا الحديثة تجعل التواصل أسرع وأسهل. أجهزة الكمبيوتر، الهواتف الذكية، والإنترنت تربط الناس حول العالم.",
+      "dictionary": {
+        "Technology": "تكنولوجيا",
+        "Communication": "تواصل",
+        "Globally": "عالمياً",
+        "Smartphones": "هواتف ذكية"
+      },
+      "questions": [
+        {
+          "question": "What connects people globally today?",
+          "options": ["Letters only", "Computers and the internet", "Pigeons"],
+          "answer": "Computers and the internet"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Unit 14: Jobs and Professions",
+      "description": "الوحدة الرابعة عشرة: المهن والوظائف",
+      "content_en": "Every job is important in our community. Doctors care for patients, teachers educate children, and engineers build structures.",
+      "content_ar": "كل مهنة مهمة في مجتمعنا. الأطباء يعتنون بالمرضى، المعلمون يعلمون الأطفال، والمهندسون يبنون المنشآت.",
+      "dictionary": {
+        "Professions": "مهن",
+        "Community": "مجتمع",
+        "Patient": "مريض",
+        "Educate": "يعلم"
+      },
+      "questions": [
+        {
+          "question": "Who cares for sick patients?",
+          "options": ["Engineers", "Doctors", "Pilot"],
+          "answer": "Doctors"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Unit 15: Space and Planets",
+      "description": "الوحدة الخامسة عشرة: الفضاء والكواكب",
+      "content_en": "Astronauts travel into space to explore the solar system. The Earth orbits the Sun, and the Moon orbits the Earth.",
+      "content_ar": "يسافر رواد الفضاء إلى الفضاء لاستكشاف المجموعة الشمسية. الأرض تدور حول الشمس، والقمر يدور حول الأرض.",
+      "dictionary": {
+        "Astronaut": "رائد فضاء",
+        "Explore": "يستكشف",
+        "Solar System": "المجموعة الشمسية",
+        "Orbit": "يدور في مدار"
+      },
+      "questions": [
+        {
+          "question": "What does the Earth orbit?",
+          "options": ["The Moon", "The Sun", "Mars"],
+          "answer": "The Sun"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Unit 16: Food and Health",
+      "description": "الوحدة السادسة عشرة: الطعام والصحة",
+      "content_en": "A balanced diet contains proteins, vitamins, and carbohydrates. Eating healthy food gives us energy to study and play.",
+      "content_ar": "النظام الغذائي المتوازن يحتوي على البروتينات، الفيتامينات، والنشويات. تناول الطعام الصحي يمنحنا الطاقة للدراسة واللعب.",
+      "dictionary": {
+        "Balanced diet": "نظام غذائي متوازن",
+        "Energy": "طاقة",
+        "Proteins": "بروتينات",
+        "Vitamins": "فيتامينات"
+      },
+      "questions": [
+        {
+          "question": "What gives us energy to study and play?",
+          "options": ["Eating healthy food", "Sleeping all day", "Watching TV"],
+          "answer": "Eating healthy food"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Unit 17: Festivals and Celebrations",
+      "description": "الوحدة السابعة عشرة: المهرجانات والاحتفالات",
+      "content_en": "Families celebrate special occasions like Eid and National Day together with joy, special meals, and traditional gifts.",
+      "content_ar": "تحتفل العائلات بالمناسبات الخاصة مثل العيد واليوم الوطني معاً بالفرح، الوجبات الخاصة، والهدايا التقليدية.",
+      "dictionary": {
+        "Festivals": "مهرجانات",
+        "Occasions": "مناسبات",
+        "Traditional": "تقليدي",
+        "Joy": "فرح"
+      },
+      "questions": [
+        {
+          "question": "How do families celebrate special occasions?",
+          "options": ["With joy and traditional gifts", "By staying alone", "By working hard"],
+          "answer": "With joy and traditional gifts"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Unit 18: Revision 3",
+      "description": "الوحدة الثامنة عشرة: مراجعة 3",
+      "content_en": "Consolidating knowledge on technology, professions, astronomy, nutrition, and cultural events.",
+      "content_ar": "ترسيخ المعارف حول التكنولوجيا، المهن، علم الفلك، التغذية، والفعاليات الثقافية.",
+      "dictionary": {
+        "Consolidate": "يرسخ / يثبت",
+        "Knowledge": "معرفة",
+        "Astronomy": "علم الفلك",
+        "Nutrition": "التغذية"
+      },
+      "questions": [
+        {
+          "question": "What is the focus of Revision 3?",
+          "options": ["Consolidating units 13 to 17", "History of sports", "Language learning only"],
+          "answer": "Consolidating units 13 to 17"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Unit 19: Looking to the Future",
+      "description": "الوحدة التاسعة عشرة: التطلع إلى المستقبل",
+      "content_en": "As we grow older, we set goals for our future. Hard work, determination, and education help us achieve our dreams.",
+      "content_ar": "كلما كبرنا، نحدد أهدافاً لمستقبلنا. العمل الجاد، الإصرار، والتعليم يساعدوننا على تحقيق أحلامنا.",
+      "dictionary": {
+        "Future": "المستقبل",
+        "Goals": "أهداف",
+        "Determination": "إصرار / عزيمة",
+        "Achieve": "يحقق"
+      },
+      "questions": [
+        {
+          "question": "What helps us achieve our dreams?",
+          "options": ["Hard work and education", "Luck only", "Doing nothing"],
+          "answer": "Hard work and education"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Unit 20: Final Revision",
+      "description": "الوحدة العشرون: المراجعة النهائية",
+      "content_en": "Congratulations on completing Grade 6 English! You are now ready for new learning challenges in the future.",
+      "content_ar": "تهانينا على إكمال منهاج اللغة الإنجليزية للصف السادس! أنت الآن جاهز لتحديات تعليمية جديدة في المستقبل.",
+      "dictionary": {
+        "Congratulations": "تهانينا",
+        "Completing": "إكمال",
+        "Challenges": "تحديات",
+        "Ready": "جاهز"
+      },
+      "questions": [
+        {
+          "question": "What have you completed in Unit 20?",
+          "options": ["Grade 6 English curriculum", "Grade 1 English", "Math course"],
+          "answer": "Grade 6 English curriculum"
         }
       ]
     }
