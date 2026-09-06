@@ -4,25 +4,71 @@
       "id": 1,
       "title": "Unit 1: Welcome to Grade 6",
       "description": "الوحدة الأولى: مرحباً بكم في الصف السادس",
-      "content_en": "Welcome back to school! Today we are learning English together.",
-      "content_ar": "مرحباً بكم مجدداً في المدرسة! اليوم نتعلم اللغة الإنجليزية معاً.",
+      "content_en": "Welcome back to school! This year we have new subjects and exciting activities. We study English, Science, Math, and History.",
+      "content_ar": "مرحباً بكم مجدداً في المدرسة! هذا العام لدينا مواد جديدة وأنشطة ممتعة. نحن ندرس الإنجليزية، العلوم، الرياضيات، والتاريخ.",
       "dictionary": {
         "Welcome": "مرحباً",
-        "School": "مدرسة",
-        "English": "اللغة الإنجليزية"
-      }
+        "Subject": "مادة دراسية",
+        "Exciting": "ممتع / مشوق",
+        "Activities": "أنشطة"
+      },
+      "questions": [
+        {
+          "question": "What subjects do we study this year?",
+          "options": ["English and Science", "Only Music", "Only Art"],
+          "answer": "English and Science"
+        },
+        {
+          "question": "What does 'Exciting' mean in Arabic?",
+          "options": ["ممل", "ممتع / مشوق", "صعب"],
+          "answer": "ممتع / مشوق"
+        }
+      ]
     },
     {
       "id": 2,
-      "title": "Unit 2: Our School Day",
-      "description": "الوحدة الثانية: يومنا المدرسي",
-      "content_en": "We study science, math, and English every day.",
-      "content_ar": "نحن ندرس العلوم، الرياضيات، واللغة الإنجليزية كل يوم.",
+      "title": "Unit 2: Our Free Time",
+      "description": "الوحدة الثانية: أوقات فراغنا",
+      "content_en": "In our free time, we enjoy different hobbies. Some pupils like playing football, while others prefer reading books or drawing.",
+      "content_ar": "في أوقات فراغنا، نستمتع بهوايات مختلفة. بعض التلاميذ يحبون لعب كرة القدم، بينما يفضل آخرون قراءة الكتب أو الرسم.",
       "dictionary": {
-        "Study": "يدرس",
-        "Science": "علوم",
-        "Math": "رياضيات"
-      }
+        "Free time": "وقت الفراغ",
+        "Hobbies": "هوايات",
+        "Prefer": "يفضل",
+        "Pupils": "تلاميذ"
+      },
+      "questions": [
+        {
+          "question": "What do pupils do in their free time?",
+          "options": ["Sleep all day", "Enjoy different hobbies", "Do homework only"],
+          "answer": "Enjoy different hobbies"
+        },
+        {
+          "question": "What is the meaning of 'Pupils'?",
+          "options": ["معلمون", "تلاميذ", "مهندسون"],
+          "answer": "تلاميذ"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Unit 3: Healthy Living",
+      "description": "الوحدة الثالثة: الحياة الصحية",
+      "content_en": "To stay healthy, we should eat fresh fruit and vegetables, drink plenty of water, and exercise every day.",
+      "content_ar": "لنحافط على صحتنا، يجب أن نأكل الفواكه والخضروات الطازجة، ونشرب الكثير من الماء، ونمارس الرياضة يومياً.",
+      "dictionary": {
+        "Healthy": "صحي",
+        "Fresh": "طازج",
+        "Exercise": "يتمرن / يتريض",
+        "Plenty": "وفير / كثير"
+      },
+      "questions": [
+        {
+          "question": "What should we eat to stay healthy?",
+          "options": ["Sweets and fast food", "Fresh fruit and vegetables", "Nothing"],
+          "answer": "Fresh fruit and vegetables"
+        }
+      ]
     }
   ]
 }

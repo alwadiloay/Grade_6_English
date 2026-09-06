@@ -111,14 +111,23 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-class DetailScreen extends StatelessWidget {
+class DetailScreen extends StatefulWidget {
   final Map unit;
   const DetailScreen({super.key, required this.unit});
 
   @override
+  State<DetailScreen> createState() => _DetailScreenState();
+}
+
+class _DetailScreenState extends State<DetailScreen> {
+  Map<int, String> selectedAnswers = {};
+
+  @override
   Widget build(BuildContext context) {
+    List questions = widget.unit['questions'] ?? [];
+
     return Scaffold(
-      appBar: AppBar(title: Text(unit['title'] ?? '')),
+      appBar: AppBar(title: Text(widget.unit['title'] ?? '')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: SingleChildScrollView(
@@ -131,7 +140,7 @@ class DetailScreen extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               Text(
-                unit['content_en'] ?? '',
+                widget.unit['content_en'] ?? '',
                 style: const TextStyle(fontSize: 16),
               ),
               const Divider(height: 32),
@@ -141,7 +150,7 @@ class DetailScreen extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               Text(
-                unit['content_ar'] ?? '',
+                widget.unit['content_ar'] ?? '',
                 style: const TextStyle(fontSize: 16),
               ),
               const Divider(height: 32),
@@ -150,14 +159,75 @@ class DetailScreen extends StatelessWidget {
                 style: Theme.of(context).textTheme.titleMedium,
               ),
               const SizedBox(height: 8),
-              if (unit['dictionary'] != null)
-                ...Map<String, String>.from(unit['dictionary']).entries.map(
+              if (widget.unit['dictionary'] != null)
+                ...Map<String, String>.from(widget.unit['dictionary'])
+                    .entries
+                    .map(
                       (e) => ListTile(
                         dense: true,
                         title: Text(e.key),
                         trailing: Text(e.value),
                       ),
                     ),
+              if (questions.isNotEmpty) ...[
+                const Divider(height: 32),
+                Text(
+                  'الأسئلة التفاعلية:',
+                  style: Theme.of(context).textTheme.titleMedium,
+                ),
+                const SizedBox(height: 8),
+                ...questions.asMap().entries.map((entry) {
+                  int qIndex = entry.key;
+                  Map q = entry.value;
+                  return Card(
+                    color: Colors.indigo.shade50,
+                    margin: const EdgeInsets.symmetric(vertical: 8),
+                    child: Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'س${qIndex + 1}: ${q['question']}',
+                            style: const TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 15),
+                          ),
+                          const SizedBox(height: 8),
+                          ...(q['options'] as List).map((opt) {
+                            bool isSelected = selectedAnswers[qIndex] == opt;
+                            bool isCorrect = opt == q['answer'];
+                            Color tileColor = Colors.transparent;
+
+                            if (selectedAnswers.containsKey(qIndex)) {
+                              if (isSelected && isCorrect) {
+                                tileColor = Colors.green.shade100;
+                              } else if (isSelected && !isCorrect) {
+                                tileColor = Colors.red.shade100;
+                              } else if (isCorrect) {
+                                tileColor = Colors.green.shade50;
+                              }
+                            }
+
+                            return Container(
+                              color: tileColor,
+                              child: RadioListTile<String>(
+                                title: Text(opt),
+                                value: opt,
+                                groupValue: selectedAnswers[qIndex],
+                                onChanged: (val) {
+                                  setState(() {
+                                    selectedAnswers[qIndex] = val!;
+                                  });
+                                },
+                              ),
+                            );
+                          }),
+                        ],
+                      ),
+                    ),
+                  );
+                }),
+              ]
             ],
           ),
         ),
